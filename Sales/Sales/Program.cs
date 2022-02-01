@@ -8,10 +8,20 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
-            builder.DataSource = "DESKTOP-8GO917E";
-            builder.InitialCatalog = "Sales";
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(); 
+            // pc
+            //builder.DataSource = "DESKTOP-8GO917E";
+            
+            //builder.InitialCatalog = "Sales";
+            //builder.IntegratedSecurity = true;
+            //builder.ConnectTimeout = 30;
+            //builder.Encrypt = false;
+            //builder.TrustServerCertificate = false;
+            //builder.ApplicationIntent = ApplicationIntent.ReadWrite;
+            //builder.MultiSubnetFailover = false;
+            ////lap
+            builder.DataSource = "DESKTOP-L1UFRGB";
+            builder.InitialCatalog = "VegetablesAndFruits";
             builder.IntegratedSecurity = true;
             builder.ConnectTimeout = 30;
             builder.Encrypt = false;
@@ -41,19 +51,19 @@ namespace ConsoleApp2
                 using (SqlDataReader reader = command.ExecuteReader())
                     ShowTable(reader);
 
-                command.CommandText = "Select Price from Products";
+                command.CommandText = "Select Color from Products";
                 using (SqlDataReader reader = command.ExecuteReader())
                     ShowTable(reader);
 
-                command.CommandText = "Select max(Price) as 'Max Price' from Products";
+                command.CommandText = "Select max(Calories) as 'Max Calories' from Products";
                 using (SqlDataReader reader = command.ExecuteReader())
                     ShowTable(reader);
 
-                command.CommandText = "Select min(Price) as 'Min Price' from Products";
+                command.CommandText = "Select min(Calories) as 'Min Calories' from Products";
                 using (SqlDataReader reader = command.ExecuteReader())
                     ShowTable(reader);
 
-                command.CommandText = "Select AVG(Price) as 'Average Price' from Products";
+                command.CommandText = "Select AVG(Calories) as 'Average Calories' from Products";
                 using (SqlDataReader reader = command.ExecuteReader())
                     ShowTable(reader);
 
