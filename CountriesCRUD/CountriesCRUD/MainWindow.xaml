@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CountriesCRUD"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="471" Width="800">
     <Grid Margin="0,0,2,16">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120*"/>
@@ -21,7 +21,7 @@
             SelectionMode="Single"
             IsReadOnly="True"
             ColumnWidth="*"
-            Margin ="10"
+            Margin ="10,10,10,14"
             Grid.ColumnSpan="6" SelectionChanged="dvgCountries_SelectionChanged">
             <DataGrid.Columns>
                 <!--<DataGridTextColumn Header="Id" 
@@ -54,9 +54,12 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name ="btnAdd" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Margin="81,363,0,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click"/>
-        <Button x:Name ="btnUpdate" Content="Update" Grid.Column="1" HorizontalAlignment="Left" Margin="313,363,0,0" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click"/>
-        <Button x:Name ="btnDelete" Content="Delete" Grid.Column="3" HorizontalAlignment="Left" Margin="10,363,0,0" VerticalAlignment="Top" Width="75" Click="btnDelete_Click"/>
+        <Button x:Name ="btnAdd" Content="Add" Grid.Column="1" HorizontalAlignment="Left" Margin="425,419,0,-15" VerticalAlignment="Top" Width="75" Click="btnAdd_Click" Grid.ColumnSpan="3"/>
+        <Button x:Name ="btnUpdate" Content="Update" Grid.Column="3" HorizontalAlignment="Left" Margin="37,419,0,-15" VerticalAlignment="Top" Width="75" Click="btnUpdate_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name ="btnDelete" Content="Delete" Grid.Column="4" HorizontalAlignment="Left" Margin="7,419,0,-15" VerticalAlignment="Top" Width="75" Click="btnDelete_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnSearch" Content="Search" Grid.Column="1" HorizontalAlignment="Left" Margin="15,419,0,-14" VerticalAlignment="Top" Width="75" Height="19" Click="btnSearch_Click"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Height="23" Margin="10,415,0,-14" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
 
     </Grid>
+
 </Window>

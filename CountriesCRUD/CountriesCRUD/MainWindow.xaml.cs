@@ -70,5 +70,17 @@ namespace CountriesCRUD
         {
 
         }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(tbxSearch.Text))
+            {
+                dvgCountries.ItemsSource = db.Countries.OrderBy(c => c.id).ToList();
+            }
+            else
+            {
+                dvgCountries.ItemsSource = db.Countries.Where(c => c.CountryName.Contains(tbxSearch.Text)).ToList();
+            }
+        }
     }
 }
