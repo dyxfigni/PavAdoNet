@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище CountriesDbModelContainer" CdmEntityContainer="CountriesDbEntities">
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="CountriesDbModel.Countries">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="Capital" ColumnName="Capital" />
+          <ScalarProperty Name="Population" ColumnName="Population" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="Continent" ColumnName="Continent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
